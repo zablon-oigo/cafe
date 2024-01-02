@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import ReviewsCard from '../layout/ReviewsCard';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -11,6 +13,9 @@ import juan from '../assets/juan.jpg';
 import john from '../assets/john.jpg';
 
 function Reviews() {
+  useEffect(() => {
+    AOS.init();
+ }, []);
   const reviewsData = [
     {
       desc: 'Absolutely love this cafe! The atmosphere is so welcoming, and the coffee is top-notch. A perfect spot to unwind and enjoy a delightful cup of goodness.',
@@ -59,7 +64,7 @@ function Reviews() {
   }, []);
 
   const gridLayout = (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-aos='fade-up'>
       {reviewsData.map((review, index) => (
         <ReviewsCard key={index} desc={review.desc} img={review.img} title={review.title} />
       ))}
