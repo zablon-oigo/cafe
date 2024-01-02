@@ -9,7 +9,7 @@ function Home() {
      }, []);
   return (
     <div className='min-h-screen  bg-gradient-to-r from-[#AB6B2E] to-[#FDE9CC]'>
-        <div className="md:px-32 px-5 md:py-32 py-10 flex flex-col-reverse md:flex-row justify-between items-center" data-aos="zoom-in-up">
+        <div className="md:px-32 px-5 md:py-32 py-10 flex flex-col-reverse md:flex-row justify-between items-center" data-aos="zoom-in-down">
             <div className="w-full md:w-1/2 mb-4">
                 <h1 className='md:text-6xl text-5xl text-center md:text-start font-bold leading-tight mb-4 text-white'>Start your day with a steaming cup of coffee</h1>
                 <p className="text-3xl text-center md:text-start mb-4">
