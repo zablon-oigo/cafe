@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import MenuCard from '../layout/MenuCard'
 import expresso from '../assets/expresso.jpg'
 import capuccinno from '../assets/capuccino.jpg'
@@ -8,11 +10,14 @@ import matcha from '../assets/matcha.jpg'
 import choclate from '../assets/choclate.jpg'
 
 function Menu() {
+  useEffect(() => {
+    AOS.init();
+ }, []);
   return (
     <>
     <div className="min-h-screen flex flex-col  md:px-32 px-5 bg-[#FDE9CC]">
         <h1 className="text-4xl font-semibold text-center mb-10 mt-24">Our Menu</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-aos='zoom-in-down'>
             <MenuCard img={expresso} title="Expresso" price="5.00" />
             <MenuCard img={capuccinno} title="Capuccino" price="5.00" />
             <MenuCard img={latte} title="Latte" price="5.00" />
