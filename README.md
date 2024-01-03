@@ -15,7 +15,7 @@ Welcome to Coffee Cafe, where every cup tells a story and every sip is an experi
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone git@github.com:zablon-oigo/cafe.git
 ```
 
 Go to the project directory
