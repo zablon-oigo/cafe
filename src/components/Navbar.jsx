@@ -51,7 +51,7 @@ function Navbar() {
            {menu?<LiaTimesSolid className='text-4xl text-white'/>:<HiBars4  className='text-4xl text-white'/>}
         </div>
       </div>
-      <section className={`${menu?'translate-x-0':'-translate-x-full'} duration-300 transition-transform md:hidden z-10 bg-black block h-[200px] w-full absolute top-70 left-0`}>
+      <section className={`${menu?'translate-x-0':'-translate-x-full'} duration-500 transition-transform md:hidden z-10 bg-black block h-[200px] w-full absolute top-70 left-0`}>
         <div className="py-14 bg-black p-4 text-white flex flex-col items-center justify-center ">
           <div className="mb-6 flex flex-col gap-6">
           <Link to={'home'} spy={true} smoth={true} duration={500} className='cursor-pointer text-2xl font-sans' onClick={closeMenu}>
