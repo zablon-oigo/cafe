@@ -13,10 +13,10 @@ function About() {
     <div className="min-h-screen  bg-gradient-to-r from-[#FDE9CC] to-[#AB6B2E] md:py-32 md:px-32 px-5 py-5">
         <h1 className='text-4xl text-center font-semibold mb-10'>About Us</h1>
         <div className="flex md:flex-row flex-col items-center justify-between gap-6">
-            <div className="w-full md:w-3/4" data-aos='fade-right'>
+            <div className="w-full md:w-3/4" data-aos='fade-right'data-aos-duration='3000' data-easing='linear'>
                 <img src={about} alt="" className="rounded" />
             </div>
-            <div className="w-full md:w-2/3" data-aos='fade-left'>
+            <div className="w-full md:w-2/3" data-aos='fade-left'data-aos-duration='3000' data-easing='linear'>
                 <h2 className="md:text-4xl text-3xl  font-semibold mb-4 md:text-white ">What makes Cafe Coffee so special ?</h2>
                 <p className="text-md mb-4">
                     Welcome to our cozy cafe, where we specialize in serving the finest coffee and providing premium coffee beans to our valued customers. Immerse yourself in the rich aroma and exquisite flavors of our carefully crafted brews. Our commitment to quality and passion for coffee sets us apart. Join us for a delightful experience that transcends the ordinary.
