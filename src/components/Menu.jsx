@@ -17,7 +17,7 @@ function Menu() {
     <>
     <div className="min-h-screen flex flex-col  md:px-32 px-5 bg-[#FDE9CC]">
         <h1 className="text-4xl font-semibold text-center mb-10 mt-24">Our Menu</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-aos='zoom-in-down'>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-aos='zoom-in-down' data-aos-duration='3000' data-easing='linear'>
             <MenuCard img={expresso} title="Expresso" price="5.00" />
             <MenuCard img={capuccinno} title="Capuccino" price="5.00" />
             <MenuCard img={latte} title="Latte" price="5.00" />
