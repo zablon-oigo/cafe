@@ -1,8 +1,37 @@
-# React + Vite
+# Cafe
+Welcome to Coffee Cafe, where every cup tells a story and every sip is an experience. Step into our warm and inviting space, where the aroma of freshly brewed coffee fills the air, creating a haven for coffee enthusiasts and those seeking a delightful escape. 
+## Demo
+[coffee cafe](https://cafe-zeta-tan.vercel.app/)
+## Tech Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Client:** React, TailwindCSS
 
-Currently, two official plugins are available:
+## Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Screenshot 2024-01-02 at 13-32-04 Coffee Shop](https://github.com/zablon-oigo/cafe/assets/143833326/3134a597-34fc-4df2-b002-006323e5b4ac)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone git@github.com:zablon-oigo/cafe.git
+```
+
+Go to the project directory
+
+```bash
+  cd cafe
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
