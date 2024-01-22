@@ -64,7 +64,7 @@ function Reviews() {
   }, []);
 
   const gridLayout = (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-aos='fade-up'>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-aos='fade-up'data-aos-duration='3000' data-easing='linear'>
       {reviewsData.map((review, index) => (
         <ReviewsCard key={index} desc={review.desc} img={review.img} title={review.title} />
       ))}
