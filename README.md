@@ -1,4 +1,4 @@
-# Cafe
+# Cafe 🚀
 Welcome to Coffee Cafe, where every cup tells a story and every sip is an experience. Step into our warm and inviting space, where the aroma of freshly brewed coffee fills the air, creating a haven for coffee enthusiasts and those seeking a delightful escape. 
 ## Demo
 [coffee cafe](https://cafe-zeta-tan.vercel.app/)
