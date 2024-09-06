@@ -21,6 +21,21 @@ jobs:
                run: |
                   npm ci
                   npm run build
+    
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
+            - name: use nodejs
+              uses: actions/setup-node@v3
+              with:
+                node-version: '20.x'
+            - name: install dependecy and build
+              run: |
+                 npm ci
+                 npm run build 
 
     
 
