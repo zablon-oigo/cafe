@@ -41,6 +41,12 @@ jobs:
               with:
                 path: './dist'
                 name: 'github-pages'
+            - name: deploy to github page
+              id:  deployment
+              uses: actions/deploy-pages@v4
 
+        environment:
+            name:  production
+            url: ${{steps.deployment.outputs.page_url}}
     
 
