@@ -1,53 +1,59 @@
-name: Deploy on GitHub
+name: Deploy  App to GitHub Pages
 
 on:
-    push:
-        branches:
-           - main
+  push:
+    branches:
+      - main
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout repo
-              uses: actions/checkout@v4
-            - name: use nodejs
-              uses: actions/setup-node@v3
-              with:
-                  node-version: '20.x'
-            - name: install dependencies & build
-              run: |
-                  npm ci
-                  npm run build
-            - name: upload build artifact
-              uses: actions/upload-artifact@v3 
-              with:
-                name: build-output 
-                path: ./dist
+  build:
+    runs-on: ubuntu-latest
 
-    deploy:
-        needs: build
-        runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            id-token: write
-            pages: write
-        steps:
-            - name: checkout repo
-              uses: actions/checkout@v4
-            - name: download build artifact
-              uses: actions/download-artifact@v3
-              with:
-                name: build-output
-            - name: upload artifact to GitHub Pages
-              uses: actions/upload-pages-artifact@v3
-              with:
-                path: './dist'
-                name: 'pages'
-            - name: deploy to GitHub Pages
-              id: deployment
-              uses: actions/deploy-pages@v4
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
 
-        environment:
-            name: production
-            url: ${{ steps.deployment.outputs.page_url }}
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Install Dependencies & Build Project
+        run: | 
+             npm ci
+             npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Install Dependencies and  Build project
+        run: |
+           npm ci
+           npm run build
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist' 
+          name: 'github-pages'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+    environment:
+      name: production
+      url: ${{ steps.deployment.outputs.page_url }}
