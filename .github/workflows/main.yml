@@ -19,6 +19,11 @@ jobs:
               run: |
                   npm ci
                   npm run build
+            - name: upload build artifact
+              uses: actions/upload-artifact@v3 
+              with:
+                name: build-output 
+                path: ./dist
 
     deploy:
         needs: build
@@ -30,17 +35,12 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
-            - name: use nodejs
-              uses: actions/setup-node@v3
+            - name: download build artifact
+              uses: actions/download-artifact@v3
               with:
-                  node-version: '20.x'
-            - name: install dependencies & build
-              run: |
-                npm ci
-                npm run build
-            
+                name: build-output
             - name: upload artifact to GitHub Pages
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-pages-artifact@v3
               with:
                 path: './dist'
                 name: 'pages'
